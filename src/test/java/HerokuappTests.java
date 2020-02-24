@@ -63,5 +63,36 @@ public class HerokuappTests {
             System.out.println("Checkbox is Togged Off");
         }
     }
+
+    @Test
+    public void CheckDropdown() {
+        driver.get("http://the-internet.herokuapp.com/dropdown");
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        WebElement dropdownElement = driver.findElement(By.id("dropdown"));
+
+        Select select1 = new Select(dropdownElement);
+//        List<WebElement> listOfElements = driver.findElement(By.id("dropdown")).findElements(By.xpath("//option[text()='Option*']"));
+//        List options = select.getOptions();
+//        List selectedOptions = select.getAllSelectedOptions();
+//        System.out.println(listOfElements);
+
+        select1.selectByValue("1");
+        if (dropdownElement.isSelected()) {
+            System.out.println("Option 1 выбрана");
+        }
+        assertEquals(dropdownElement.isSelected(), dropdownElement.isSelected(), "Выбран первый элемент ");
+
+        Select select2 = new Select(dropdownElement);
+        select2.selectByValue("2");
+        dropdownElement.isSelected();
+        assertEquals(dropdownElement.isSelected(), dropdownElement.isSelected(), "Выбран второй элемент ");
+        if (dropdownElement.isSelected()) {
+            System.out.println("Option 2 выбрана");
+        } else {
+            System.out.println("Не выбрана");
+        }
+    }
 }
+
+
 
