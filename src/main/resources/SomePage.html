@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Companies</title>
+</head>
+
+<body>
+<h3>Companies</h3>
+<style>
+    table {
+        font-family: times new roman, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    td,
+    th {
+        border: 1px solid #8B0000;
+        text-align: left;
+        padding: 5px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #FFB6C1;
+    }
+</style>
+<table data-qa="qa_table">
+    <tr>
+        <th>Company</th>
+        <th>Contact</th>
+        <th>Country</th>
+    </tr>
+    <tr>
+        <td>Alfreds Futterkiste</td>
+        <td>Maria Anders</td>
+        <td>Germany</td>
+    </tr>
+    <tr>
+        <td>Centro comercial Moctezuma</td>
+        <td>Francisco Chang</td>
+        <td>Mexico</td>
+    </tr>
+    <tr>
+        <td>Centro comercial Moctezuma</td>
+        <td>Francisco Chang</td>
+        <td>Mexico</td>
+    </tr>
+</table>
+<p>
+    <label for="fname"> Text </label>
+    <input type="text" id="fname" name="fname" data-qa="qa_input_field">
+</p>
+<p>
+    <label>Checkbox
+        <input type="checkbox" data-qa="qa_checkbox">
+    </label>
+</p>
+<p>
+    <label for="cars"> Select Cars </label>
+    <select id="cars" data-qa="qa_dropdown">
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="mercedes">Mercedes</option>
+        <option value="audi">Audi</option>
+    </select>
+</p>
+<p>
+    <button type="button" data-qa="qa_button">Click Me!</button>
+</p>
+<p>
+    <img src="smiley.gif" data-qa="qa_image" alt="Smiley face" height="42" width="42">
+</p>
+<p data-qa="qa_text">Some text here</p>
+<p>
+    <a data-qa="qa_link" href="https://www.tut.by">Visit tut.by</a>
+</p>
+</body>
+</html>
