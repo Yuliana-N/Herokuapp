@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -17,6 +18,11 @@ public class Locators {
         driver = new ChromeDriver();
         driver.get("d:/work2/TechMe/IdeaProjects/Herokuapp/src/main/resources/SomePage.html");
     }
+    @AfterTest
+    public void doAfterTest(){
+        driver.quit();
+    }
+
     @Test
    public void findByLocators(){
 
